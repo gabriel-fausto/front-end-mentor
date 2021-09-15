@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
 
-body {
-    margin: 0 auto;
+html {
+    min-height: 100vh;
 
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
+}
 
+body {
     font-family: 'Red Hat Display';
 }
 
@@ -15,10 +18,21 @@ body > div {
     height: 90%;
 }
 
-.bkg {
-    background-image: url("../img/pattern-background-desktop.svg");
-    background-repeat: no-repeat;
-    background-position: center top;
+@media screen and (max-width: 575px) {
+    .bkg {
+        background-image: url("../img/pattern-background-mobile.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center top;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .bkg {
+        background-image: url("../img/pattern-background-desktop.svg");
+        background-repeat: no-repeat;
+        background-position: center top;
+    }
 }
 
 main > div {
@@ -61,7 +75,7 @@ h2 {
     color: hsl(224, 23%, 55%);
 }
 
-.change u {
+.change {
     color: hsl(245, 75%, 52%);
     font-weight: 700;
 }
@@ -70,5 +84,21 @@ h2 {
     background-color: hsl(245, 75%, 52%);
     color: white;
 
+    font-size: 16px;
+
     border-radius: 12px;
+}
+
+.botao:active {
+    background-color: hsl(249, 90%, 68%);
+}
+
+.change:active {
+    color: hsl(249, 63%, 59%);
+    text-decoration: none;
+}
+
+.cancel:active {
+    font-weight: 700;
+    color: hsl(223, 47%, 23%);
 }
