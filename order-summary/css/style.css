@@ -15,7 +15,6 @@ body {
 
 body > div {
     background-color: hsl(225, 100%, 94%);
-    height: 90%;
 }
 
 @media screen and (max-width: 575px) {
